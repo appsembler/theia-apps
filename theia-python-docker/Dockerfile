@@ -12,7 +12,7 @@ RUN pip install \
 
 ARG version=latest
 
-RUN git clone https://github.com/thewhitetulip/code-build-app-with-python-antitextbook.git /home/intro-python
+RUN git clone https://github.com/appsembler/code-build-app-with-python-antitextbook.git /home/intro-python
 
 WORKDIR /home/theia
 ADD $version.package.json ./package.json
