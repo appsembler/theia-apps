@@ -3,7 +3,7 @@
     "theia": {
         "frontend": {
             "config": {
-                "applicationName": "Theia Python Example",
+                "applicationName": "Appsembler: Intro to Python",
                 "preferences": {
                     "files.enableTrash": false
                 }

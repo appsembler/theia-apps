@@ -12,6 +12,8 @@ RUN pip install \
 
 ARG version=latest
 
+RUN git clone https://github.com/thewhitetulip/code-build-app-with-python-antitextbook.git /home/intro-python
+
 WORKDIR /home/theia
 ADD $version.package.json ./package.json
 ARG GITHUB_TOKEN
@@ -19,4 +21,4 @@ RUN yarn --cache-folder ./ycache && rm -rf ./ycache
 RUN yarn theia build
 EXPOSE 3000
 ENV SHELL /bin/bash
-ENTRYPOINT [ "yarn", "theia", "start", "/home/project", "--hostname=0.0.0.0" ]
+ENTRYPOINT [ "yarn", "theia", "start", "/home/intro-python", "--hostname=0.0.0.0" ]
